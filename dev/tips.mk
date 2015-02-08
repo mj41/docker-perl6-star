@@ -6,7 +6,7 @@ Some tips usefull during development.
 Clone and prepare dev environment
 ---------------------------------
 
-  mkdir - cd ~/devel/docker-perl6/perl6-star
+  mkdir -p ~/devel/docker-perl6/perl6-star
   cd ~/devel/docker-perl6/perl6-star/
   git clone git@github.com:mj41/docker-perl6-star.git .
 
