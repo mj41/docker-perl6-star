@@ -1,0 +1,29 @@
+Create new Docker container and run perl6 hello world:
+Hello world from Docker container!
+
+real	0m0.271s
+user	0m0.216s
+sys	0m0.034s
+
+real	0m1.189s
+user	0m0.006s
+sys	0m0.008s
+
+Remove just created container:
+p6-speed-test-container1
+
+real	0m1.257s
+user	0m0.006s
+sys	0m0.008s
+
+Create new container, run perl6 hello world and remove container:
+Hello world from Docker container!
+
+real	0m0.283s
+user	0m0.228s
+sys	0m0.041s
+
+real	0m2.375s
+user	0m0.009s
+sys	0m0.005s
+
