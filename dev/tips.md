@@ -66,7 +66,7 @@ Prepare and push 'develop', 'latest' and new tag.
 
     git push
     git tag -s -m"Rakudo Star release 2015.03" 2015.03
-    git push 2015.03
+    git push origin 2015.03
     git checkout latest
     git merge develop
     git push
