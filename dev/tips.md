@@ -24,6 +24,10 @@ Inspect containter created from mj41/perl6-star:my image:
     cd ~/devel/docker-perl6/perl6-star/
     docker run -i -t --rm --name my-perl6-star mj41/perl6-star:my /bin/bash
 
+Show versions:
+
+    perl6 -e'say "{$*PERL.compiler.gist} on {$*VM.gist} for {$*DISTRO.gist}"'
+
 Test panda
 ----------
 

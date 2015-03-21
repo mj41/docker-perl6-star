@@ -22,4 +22,5 @@ RUN rm -rf /tmp/* /var/tmp/* /home/urak/dockerfile-bin /home/urak/cache
 
 USER urak
 ENV PATH $PATH:/home/urak/rakudo-install/bin:/home/urak/rakudo-install/languages/perl6/site/bin
+RUN perl6 -e'say "{$*PERL.compiler.gist} on {$*VM.gist} for {$*DISTRO.gist}"'
 CMD /bin/bash
