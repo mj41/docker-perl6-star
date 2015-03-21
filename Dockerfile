@@ -15,7 +15,7 @@ COPY dockerfile-bin/* /home/urak/dockerfile-bin/
 USER urak
 ENV HOME /home/urak
 RUN mkdir -p /home/urak/rakudo-install/
-RUN /home/urak/dockerfile-bin/all.sh release 2015.02 /home/urak/rakudo-install
+RUN /home/urak/dockerfile-bin/all.sh release 2015.03 /home/urak/rakudo-install
 
 USER root
 RUN rm -rf /tmp/* /var/tmp/* /home/urak/dockerfile-bin /home/urak/cache
