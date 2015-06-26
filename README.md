@@ -1,11 +1,16 @@
 mj41/perl6-star
 ===============
 
-[mj41/perl6-star](https://registry.hub.docker.com/u/mj41/perl6-star/) is [Docker](https://www.docker.com/whatisdocker/) image
+[mj41/perl6-star](https://registry.hub.docker.com/u/mj41/perl6-star/) is unofficial [Docker](https://www.docker.com/whatisdocker/) image
 of [Rakudo Star](http://rakudo.org/about/) [Perl 6](http://perl6.org/) with [MoarVM backend](http://moarvm.com/)
-based on [Fedora 21](https://registry.hub.docker.com/_/fedora/) Docker image.
+based on [Fedora 21](https://registry.hub.docker.com/_/fedora/) Docker image and maintained by [mj41](https://github.com/mj41).
 
-Source code of Dockerfile and utilities lives on [github.com/mj41/docker-perl6-star](https://github.com/mj41/docker-perl6-star).
+Source code of Dockerfile and utilities live on [github.com/mj41/docker-perl6-star](https://github.com/mj41/docker-perl6-star).
+
+The official Docker image
+-------------------------
+
+[The official Docker image of Perl 6 Rakudo Star](https://registry.hub.docker.com/_/rakudo-star/) has name '[rakudo-star](https://registry.hub.docker.com/_/rakudo-star/)' and is based on [buildpack-deps](https://registry.hub.docker.com/_/buildpack-deps/). Source repository of 'rakudo-star' is available on [github.com/perl6/docker](https://github.com/perl6/docker).
 
 HowTo intro
 -----------
