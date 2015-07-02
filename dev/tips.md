@@ -32,8 +32,11 @@ Test panda
 ----------
 
     time docker run -i -t --rm --name my-perl6-star mj41/perl6-star:my /bin/bash -c $' \
-      whoami ; pwd ; which panda \
-      ; panda install SP6 \
+		time perl6 -e\'EVAL "print qq/Hello from Perl 5\n/;", :lang<perl5>;\' \
+	'
+
+    time docker run -i -t --rm --name my-perl6-star mj41/perl6-star:my /bin/bash -c $' \
+      panda install SP6 \
       ; time perl6 -e\' \
         use SP6; \
         my $sp = SP6.new(); \
@@ -49,7 +52,7 @@ Gen speed data
 Prepare release
 ---------------
 
-Example for 2015.03 release.
+Example for 2015.06 release.
 
 Switch to 'develop' branch.
 
@@ -57,16 +60,16 @@ Switch to 'develop' branch.
 
 See commit related to previous release and take inspiration there.
 
-    git show 2015.03
+    git show 2015.06
     vim Dockerfile
-    cp tags/2015.02.md tags/2015.03.md
-    git commit -m"Rakudo Star release 2015.03"
+    cp tags/2015.03.md tags/2015.06.md
+    git commit -m"Rakudo Star release 2015.06"
 
 Prepare and push 'develop', 'latest' and new tag.
 
     git push
-    git tag -s -m"Rakudo Star release 2015.03" 2015.03
-    git push origin 2015.03
+    git tag -s -m"Rakudo Star release 2015.06 (Fedora 22)" 2015.06
+    git push origin 2015.06
     git checkout latest
     git merge develop
     git push

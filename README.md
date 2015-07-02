@@ -3,7 +3,7 @@ mj41/perl6-star
 
 [mj41/perl6-star](https://registry.hub.docker.com/u/mj41/perl6-star/) is unofficial [Docker](https://www.docker.com/whatisdocker/) image
 of [Rakudo Star](http://rakudo.org/about/) [Perl 6](http://perl6.org/) with [MoarVM backend](http://moarvm.com/)
-based on [Fedora 21](https://registry.hub.docker.com/_/fedora/) Docker image and maintained by [mj41](https://github.com/mj41).
+based on [Fedora 22](https://registry.hub.docker.com/_/fedora/) Docker image and maintained by [mj41](https://github.com/mj41).
 
 Source code of Dockerfile and utilities live on [github.com/mj41/docker-perl6-star](https://github.com/mj41/docker-perl6-star).
 
@@ -25,7 +25,7 @@ You should know what Docker, Docker image and Docker containers are about. Pleas
 HowTo prepare
 -------------
 
-Install and start Docker service. Example for Fedora 21:
+Install and start Docker service. Example for Fedora 22:
 
     sudo yum -y install docker-io
     sudo systemctl start docker
@@ -35,7 +35,7 @@ Install and start Docker service. Example for Fedora 21:
 For other distributions or Mac OS see [installation guide](https://docs.docker.com/installation/#installation).
 
 Pull mj41/perl6-star image. Command below is going to download nearly 1GB of data from Internet.
-It contains base fedora:21 image and many other layers of mj41/perl6-star Docker image.
+It contains base fedora:22 image and many other layers of mj41/perl6-star Docker image.
 
     docker pull mj41/perl6-star:latest
 
@@ -93,10 +93,11 @@ and inside container bash:
 
 Image Tags
 ----------
-* [2015.03](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.03.md)
+* [2015.06](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.06.md)
 * latest (point to newest tag of Rakudo Star release)
 
 Outdated image tags
 -------------------
-* [2015.01](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.01.md)
-* [2015.02](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.02.md)
+* [2015.01](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.01.md) (Fedora 21)
+* [2015.02](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.02.md) (Fedora 21)
+* [2015.03](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.03.md) (Fedora 21)
