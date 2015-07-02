@@ -73,5 +73,11 @@ Prepare and push 'develop', 'latest' and new tag.
     git checkout latest
     git merge develop
     git push
+    git checkout develop
 
 Start build on [hub.docker.com](https://registry.hub.docker.com/u/mj41/perl6-star/).
+
+	export DOCKER_HUB_TOKEN='0b7...'
+	curl -H "Content-Type: application/json" --data '{"source_type": "Tag", "source_name": "2015.06"}'    -X POST https://registry.hub.docker.com/u/mj41/perl6-star/trigger/$DOCKER_HUB_TOKEN/
+	curl -H "Content-Type: application/json" --data '{"source_type": "Branch", "source_name": "latest"}'  -X POST https://registry.hub.docker.com/u/mj41/perl6-star/trigger/$DOCKER_HUB_TOKEN/
+	curl -H "Content-Type: application/json" --data '{"source_type": "Branch", "source_name": "develop"}' -X POST https://registry.hub.docker.com/u/mj41/perl6-star/trigger/$DOCKER_HUB_TOKEN/
