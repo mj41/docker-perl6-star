@@ -27,7 +27,7 @@ HowTo prepare
 
 Install and start Docker service. Example for Fedora 22:
 
-    sudo yum -y install docker-io
+    sudo dnf -y install docker
     sudo systemctl start docker
     sudo systemctl status docker
     docker info
