@@ -93,11 +93,12 @@ and inside container bash:
 
 Image Tags
 ----------
-* [2015.06](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.06.md)
+* [2015.07](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.07.md)
 * latest (point to newest tag of Rakudo Star release)
 
 Outdated image tags
 -------------------
-* [2015.01](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.01.md) (Fedora 21)
-* [2015.02](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.02.md) (Fedora 21)
+* [2015.06](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.06.md) (Fedora 22)
 * [2015.03](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.03.md) (Fedora 21)
+* [2015.02](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.02.md) (Fedora 21)
+* [2015.01](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.01.md) (Fedora 21)
