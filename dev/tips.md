@@ -64,6 +64,7 @@ See commit related to previous release and take inspiration there.
     vim Dockerfile
     vim README.md
     cp tags/2015.06.md tags/2015.07.md
+    git add -A ; git status
     git commit -m"Rakudo Star release 2015.07"
 
 Prepare and push 'develop', 'latest' and new tag.
