@@ -3,7 +3,7 @@ mj41/perl6-star
 
 [mj41/perl6-star](https://registry.hub.docker.com/u/mj41/perl6-star/) is unofficial [Docker](https://www.docker.com/whatisdocker/) image
 of [Rakudo Star](http://rakudo.org/about/) [Perl 6](http://perl6.org/) with [MoarVM backend](http://moarvm.com/)
-based on [Fedora 22](https://registry.hub.docker.com/_/fedora/) Docker image and maintained by [mj41](https://github.com/mj41).
+based on [Fedora Docker image](https://registry.hub.docker.com/_/fedora/) and maintained by [mj41](https://github.com/mj41).
 
 Source code of Dockerfile and utilities live on [github.com/mj41/docker-perl6-star](https://github.com/mj41/docker-perl6-star).
 
@@ -91,13 +91,12 @@ and inside container bash:
 
     perl6 /mnt/host-p6-dir/base-test.p6
 
-Image Tags
-----------
-* [2016.01](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2016.01.md)
-* latest (point to newest tag of Rakudo Star release)
+Newer image
+-----------
+* [2016.01](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2016.01.md) (Fedora 23)
 
-Outdated image tags
--------------------
+Old images
+----------
 * [2015.11](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.11.md) (Fedora 23)
 * [2015.09](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.09.md) (Fedora 22)
 * [2015.07](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.07.md) (Fedora 22)
