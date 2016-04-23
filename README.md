@@ -25,7 +25,7 @@ You should know what Docker, Docker image and Docker containers are about. Pleas
 HowTo prepare
 -------------
 
-Install and start Docker service. Example for Fedora 22:
+Install and start Docker service. Example for Fedora 23:
 
     sudo dnf -y install docker
     sudo systemctl start docker
@@ -35,7 +35,7 @@ Install and start Docker service. Example for Fedora 22:
 For other distributions or Mac OS see [installation guide](https://docs.docker.com/installation/#installation).
 
 Pull mj41/perl6-star image. Command below is going to download nearly 1GB of data from Internet.
-It contains base fedora:22 image and many other layers of mj41/perl6-star Docker image.
+It contains base fedora:23 image and many other layers of mj41/perl6-star Docker image.
 
     docker pull mj41/perl6-star:latest
 
@@ -93,11 +93,12 @@ and inside container bash:
 
 Image Tags
 ----------
-* [2015.09](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.09.md)
+* [2015.11](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.11.md)
 * latest (point to newest tag of Rakudo Star release)
 
 Outdated image tags
 -------------------
+* [2015.09](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.09.md) (Fedora 22)
 * [2015.07](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.07.md) (Fedora 22)
 * [2015.06](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.06.md) (Fedora 22)
 * [2015.03](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.03.md) (Fedora 21)

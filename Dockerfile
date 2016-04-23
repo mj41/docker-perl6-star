@@ -1,4 +1,4 @@
-FROM fedora:22
+FROM fedora:23
 MAINTAINER Michal Jurosz <docker@mj41.cz>
 
 RUN dnf update -y \
@@ -17,7 +17,7 @@ USER urak
 ENV HOME /home/urak
 RUN mkdir -p /home/urak/rakudo-install/
 COPY dockerfile-bin/base.sh /home/urak/dockerfile-bin/
-RUN /home/urak/dockerfile-bin/base.sh release 2015.09 /home/urak/rakudo-install
+RUN /home/urak/dockerfile-bin/base.sh release 2015.11 /home/urak/rakudo-install
 
 ENV PATH $PATH:/home/urak/rakudo-install/bin:/home/urak/rakudo-install/languages/perl6/site/bin
 

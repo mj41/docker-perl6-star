@@ -18,7 +18,7 @@ Build mj41/perl6-star:my (note tag is 'my'):
     cd ~/devel/docker-perl6/perl6-star/
     docker build --force-rm --rm -t="mj41/perl6-star:my" .
 
-Inspect containter created from mj41/perl6-star:my image:
+Inspect container created from mj41/perl6-star:my image:
 
     cd ~/devel/docker-perl6/perl6-star/
     docker run -i -t --rm --name my-perl6-star mj41/perl6-star:my /bin/bash
@@ -51,7 +51,7 @@ Gen speed data
 Prepare release
 ---------------
 
-Example for 2015.09 release.
+Example for 2015.11 release.
 
 Switch to 'develop' branch.
 
@@ -59,18 +59,18 @@ Switch to 'develop' branch.
 
 See commit related to previous release and take inspiration there.
 
-    git show 2015.09
+    git show 2015.06..2015.09
     vim Dockerfile
     vim README.md
-    cp tags/2015.06.md tags/2015.09.md
+    cp tags/2015.09.md tags/2015.11.md
     git add -A ; git status
-    git commit -m"Rakudo Star release 2015.09"
+    git commit -m"Rakudo Star release 2015.11"
 
 Prepare and push 'develop', 'latest' and new tag.
 
     git push
-    git tag -s -m"Rakudo Star release 2015.09 (Fedora 22)" 2015.09
-    git push origin 2015.09
+    git tag -s -m"Rakudo Star release 2015.11 (Fedora 23)" 2015.11
+    git push origin 2015.11
     git checkout latest
     git merge develop
     git push
@@ -80,6 +80,6 @@ Add new tags to https://hub.docker.com/r/mj41/perl6-star/~/settings/automated-bu
 
 Start build on [hub.docker.com](https://registry.hub.docker.com/u/mj41/perl6-star/).
 	export DOCKER_HUB_TOKEN='0b7...'
-	curl -H "Content-Type: application/json" --data '{"source_type": "Tag", "source_name": "2015.09"}'    -X POST https://registry.hub.docker.com/u/mj41/perl6-star/trigger/$DOCKER_HUB_TOKEN/
+	curl -H "Content-Type: application/json" --data '{"source_type": "Tag", "source_name": "2015.11"}'    -X POST https://registry.hub.docker.com/u/mj41/perl6-star/trigger/$DOCKER_HUB_TOKEN/
 	curl -H "Content-Type: application/json" --data '{"source_type": "Branch", "source_name": "latest"}'  -X POST https://registry.hub.docker.com/u/mj41/perl6-star/trigger/$DOCKER_HUB_TOKEN/
 	curl -H "Content-Type: application/json" --data '{"source_type": "Branch", "source_name": "develop"}' -X POST https://registry.hub.docker.com/u/mj41/perl6-star/trigger/$DOCKER_HUB_TOKEN/

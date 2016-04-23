@@ -1,2 +1,3 @@
 cache/*
 !cache/info.md
+.tags_swap
