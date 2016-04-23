@@ -31,7 +31,7 @@ Test panda
 ----------
 
     time docker run -i -t --rm --name my-perl6-star mj41/perl6-star:my /bin/bash -c $' \
-		time perl6 -e\'EVAL "print qq/Hello from Perl 5\n/;", :lang<perl5>;\' \
+		time perl6 -e\'EVAL "print qq/Hello from Perl 5\n/;", :lang<Perl5>;\' \
 	'
 
     time docker run -i -t --rm --name my-perl6-star mj41/perl6-star:my /bin/bash -c $' \
@@ -51,7 +51,7 @@ Gen speed data
 Prepare release
 ---------------
 
-Example for 2015.11 release.
+Example for 2016.01 release.
 
 Switch to 'develop' branch.
 
@@ -59,18 +59,20 @@ Switch to 'develop' branch.
 
 See commit related to previous release and take inspiration there.
 
-    git show 2015.06..2015.09
+    git show 2015.09..2015.11
     vim Dockerfile
     vim README.md
-    cp tags/2015.09.md tags/2015.11.md
+    cp tags/2015.11.md tags/2016.01.md
     git add -A ; git status
-    git commit -m"Rakudo Star release 2015.11"
+    git commit -m"Rakudo Star release 2016.01"
+
+Try to build image. See 'Build and test locally' above.
 
 Prepare and push 'develop', 'latest' and new tag.
 
     git push
-    git tag -s -m"Rakudo Star release 2015.11 (Fedora 23)" 2015.11
-    git push origin 2015.11
+    git tag -s -m"Rakudo Star release 2016.01 (Fedora 23)" 2016.01
+    git push origin 2016.01
     git checkout latest
     git merge develop
     git push
@@ -80,6 +82,10 @@ Add new tags to https://hub.docker.com/r/mj41/perl6-star/~/settings/automated-bu
 
 Start build on [hub.docker.com](https://registry.hub.docker.com/u/mj41/perl6-star/).
 	export DOCKER_HUB_TOKEN='0b7...'
-	curl -H "Content-Type: application/json" --data '{"source_type": "Tag", "source_name": "2015.11"}'    -X POST https://registry.hub.docker.com/u/mj41/perl6-star/trigger/$DOCKER_HUB_TOKEN/
+    while [ `curl -s https://hub.docker.com/r/mj41/perl6-star/builds/ | grep Building | wc -l` != "0" ]; do echo sleep && sleep 60; done
+	curl -H "Content-Type: application/json" --data '{"source_type": "Tag", "source_name": "2016.01"}'    -X POST https://registry.hub.docker.com/u/mj41/perl6-star/trigger/$DOCKER_HUB_TOKEN/
+    sleep 60 ; while [ `curl -s https://hub.docker.com/r/mj41/perl6-star/builds/ | grep Building | wc -l` != "0" ]; do echo sleep && sleep 60; done
 	curl -H "Content-Type: application/json" --data '{"source_type": "Branch", "source_name": "latest"}'  -X POST https://registry.hub.docker.com/u/mj41/perl6-star/trigger/$DOCKER_HUB_TOKEN/
+    sleep 60 ; while [ `curl -s https://hub.docker.com/r/mj41/perl6-star/builds/ | grep Building | wc -l` != "0" ]; do echo sleep && sleep 60; done
 	curl -H "Content-Type: application/json" --data '{"source_type": "Branch", "source_name": "develop"}' -X POST https://registry.hub.docker.com/u/mj41/perl6-star/trigger/$DOCKER_HUB_TOKEN/
+    sleep 60 ; while [ `curl -s https://hub.docker.com/r/mj41/perl6-star/builds/ | grep Building | wc -l` != "0" ]; do echo sleep && sleep 60; done

@@ -42,5 +42,5 @@ cd  ..
 rm -rf rakudo-star-tmp
 
 # Initialize panda
-export PATH="$PATH:$INSTALL_PREFIX/bin:$INSTALL_PREFIX/languages/perl6/site/bin"
+export PATH="$PATH:$INSTALL_PREFIX/bin:$INSTALL_PREFIX/share/perl6/site/bin"
 DESTDIR="$INSTALL_PREFIX" panda --version
