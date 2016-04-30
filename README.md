@@ -91,12 +91,14 @@ and inside container bash:
 
     perl6 /mnt/host-p6-dir/base-test.p6
 
-Newer image
------------
-* [2016.01](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2016.01.md) (Fedora 23)
+Newer image/tags
+----------------
+* [2016.04](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2016.04.md) (Fedora 23)
+* latest should be the same as the one a line above
 
-Old images
-----------
+Old images/tags
+---------------
+* [2016.01](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2016.01.md) (Fedora 23)
 * [2015.11](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.11.md) (Fedora 23)
 * [2015.09](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.09.md) (Fedora 22)
 * [2015.07](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.07.md) (Fedora 22)

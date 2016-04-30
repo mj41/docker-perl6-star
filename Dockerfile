@@ -17,7 +17,7 @@ USER urak
 ENV HOME /home/urak
 RUN mkdir -p /home/urak/rakudo-install/
 COPY dockerfile-bin/base.sh /home/urak/dockerfile-bin/
-RUN /home/urak/dockerfile-bin/base.sh release 2016.01 /home/urak/rakudo-install
+RUN /home/urak/dockerfile-bin/base.sh release 2016.04 /home/urak/rakudo-install
 
 ENV PATH $PATH:/home/urak/rakudo-install/bin:/home/urak/rakudo-install/share/perl6/site/bin
 
