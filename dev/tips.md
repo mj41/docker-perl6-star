@@ -75,19 +75,20 @@ Prepare and push 'develop', 'latest' and new tag.
     git push
     git tag -s -m"Rakudo Star release 2016.04 (Fedora 23)" 2016.04
     git push origin 2016.04
-    git checkout latest
-    git merge develop
-    git push
+    git tag -d latest
+    git tag -s -m"latest Rakudo Star release" latest
+    git push origin latest
     git checkout develop
 
-Add new tags to https://hub.docker.com/r/mj41/perl6-star/~/settings/automated-builds/ .
+Add new tags to https://hub.docker.com/r/mj41/perl6-star/~/settings/automated-builds/ 
+save and trigger new builds.
 
 Start build on [hub.docker.com](https://registry.hub.docker.com/u/mj41/perl6-star/).
 	export DOCKER_HUB_TOKEN='0b7...'
     while [ `curl -s https://hub.docker.com/r/mj41/perl6-star/builds/ | grep Building | wc -l` != "0" ]; do echo sleep && sleep 60; done
 	curl -H "Content-Type: application/json" --data '{"source_type": "Tag", "source_name": "2016.04"}'    -X POST https://registry.hub.docker.com/u/mj41/perl6-star/trigger/$DOCKER_HUB_TOKEN/
     sleep 60 ; while [ `curl -s https://hub.docker.com/r/mj41/perl6-star/builds/ | grep Building | wc -l` != "0" ]; do echo sleep && sleep 60; done
-	curl -H "Content-Type: application/json" --data '{"source_type": "Branch", "source_name": "latest"}'  -X POST https://registry.hub.docker.com/u/mj41/perl6-star/trigger/$DOCKER_HUB_TOKEN/
+	curl -H "Content-Type: application/json" --data '{"source_type": "Tag", "source_name": "latest"}'  -X POST https://registry.hub.docker.com/u/mj41/perl6-star/trigger/$DOCKER_HUB_TOKEN/
     sleep 60 ; while [ `curl -s https://hub.docker.com/r/mj41/perl6-star/builds/ | grep Building | wc -l` != "0" ]; do echo sleep && sleep 60; done
 	curl -H "Content-Type: application/json" --data '{"source_type": "Branch", "source_name": "develop"}' -X POST https://registry.hub.docker.com/u/mj41/perl6-star/trigger/$DOCKER_HUB_TOKEN/
     sleep 60 ; while [ `curl -s https://hub.docker.com/r/mj41/perl6-star/builds/ | grep Building | wc -l` != "0" ]; do echo sleep && sleep 60; done
