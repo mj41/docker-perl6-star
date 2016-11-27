@@ -60,17 +60,17 @@ Switch to 'develop' branch.
 
 See commit related to previous release and take inspiration there.
 
-    export PREV2_STAR_REL='2016.01'
-    export PREV1_STAR_REL='2016.04'
-    export STAR_REL='2016.07'
+    export PREV2_STAR_REL='2016.04'
+    export PREV1_STAR_REL='2016.07'
+    export STAR_REL='2016.10'
     export BASED_ON='Fedora 23'
     echo "Preparing release of '$STAR_REL' (based on '$BASED_ON') based on '$PREV1_STAR_REL' and '$PREV2_STAR_REL'."
 
     cd ~/devel/docker-perl6/perl6-star/
     git show $PREV2_STAR_REL..$PREV1_STAR_REL
+    cp tags/$PREV1_STAR_REL.md tags/$STAR_REL.md
     vim Dockerfile
     vim README.md
-    cp tags/$PREV1_STAR_REL.md tags/$STAR_REL.md
     vim tags/$STAR_REL.md
     git add -A ; git status
     git commit -m"Rakudo Star release $STAR_REL"
@@ -86,7 +86,7 @@ Prepare and push 'develop', 'latest' and new tag.
     git tag -d latest
     git tag -s -m"latest Rakudo Star release" latest
 
-    git push origin latest
+    git push origin latest --force
     git checkout develop
 
 Login and add new tags to https://hub.docker.com/r/mj41/perl6-star/~/settings/automated-builds/

@@ -93,11 +93,12 @@ and inside container bash:
 
 Newer image/tags
 ----------------
-* [2016.07](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2016.07.md) (Fedora 23)
+* [2016.10](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2016.10.md) (Fedora 23)
 * latest should be the same as the one a line above
 
 Old images/tags
 ---------------
+* [2016.07](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2016.07.md) (Fedora 23)
 * [2016.04](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2016.04.md) (Fedora 23)
 * [2016.01](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2016.01.md) (Fedora 23)
 * [2015.11](https://github.com/mj41/docker-perl6-star/blob/develop/tags/2015.11.md) (Fedora 23)
