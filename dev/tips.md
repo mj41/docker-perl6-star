@@ -60,10 +60,10 @@ Switch to 'develop' branch.
 
 See commit related to previous release and take inspiration there.
 
-    export PREV2_STAR_REL='2016.04'
-    export PREV1_STAR_REL='2016.07'
-    export STAR_REL='2016.10'
-    export BASED_ON='Fedora 23'
+    export PREV2_STAR_REL='2016.07'
+    export PREV1_STAR_REL='2016.10'
+    export STAR_REL='2016.11'
+    export BASED_ON='Fedora 25'
     echo "Preparing release of '$STAR_REL' (based on '$BASED_ON') based on '$PREV1_STAR_REL' and '$PREV2_STAR_REL'."
 
     cd ~/devel/docker-perl6/perl6-star/

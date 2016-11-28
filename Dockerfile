@@ -1,10 +1,9 @@
-FROM fedora:23
+FROM fedora:25
 MAINTAINER Michal Jurosz <docker@mj41.cz>
 
-RUN dnf update -y \
-  && dnf install -y perl make gcc tar git findutils which \
-                    perl-autodie perl-Test-Harness perl-ExtUtils-Command \
-                    perl-devel perl-Filter-Simple perl-ExtUtils-Embed perl-Test-Simple \
+RUN dnf install -y perl make gcc tar git findutils which \
+                   perl-autodie perl-Test-Harness perl-ExtUtils-Command \
+                   perl-devel perl-Filter-Simple perl-ExtUtils-Embed perl-Test-Simple \
   && dnf clean all
 
 RUN useradd urak
@@ -17,7 +16,7 @@ USER urak
 ENV HOME /home/urak
 RUN mkdir -p /home/urak/rakudo-install/
 COPY dockerfile-bin/base.sh /home/urak/dockerfile-bin/
-RUN /home/urak/dockerfile-bin/base.sh release 2016.10 /home/urak/rakudo-install
+RUN /home/urak/dockerfile-bin/base.sh release 2016.11 /home/urak/rakudo-install
 
 ENV PATH $PATH:/home/urak/rakudo-install/bin:/home/urak/rakudo-install/share/perl6/site/bin
 
